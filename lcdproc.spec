@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://lcdproc.omnipotent.net.net/%{name}-%{version}.tar.bz2
+# Source0-md5:	4f39e77f459c9cbf18e475651327a04b
 Source1:	LCDd.init
 URL:		http://lcdproc.omnipotent.net/
 BuildRequires:	autoconf
