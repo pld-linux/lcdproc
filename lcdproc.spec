@@ -1,8 +1,8 @@
 Summary:	LCDproc displays real-time system information on a 20x4 backlit LCD
-Summary(pl):	LCDproc wy¶wietla aktualne informacje o systemie na 20x4 wy¶wietlaczu LCD
+Summary(pl):	LCDproc wy¶wietla aktualne informacje o systemie na wy¶wietlaczu LCD 20x4
 Name:		lcdproc
 Version:	0.4.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://lcdproc.omnipotent.net.net/%{name}-%{version}.tar.bz2
@@ -25,16 +25,14 @@ usage, uptime, and a lot more.
 
 %description -l pl
 LCDproc jest narzêdziem w architekturze klient/serwer zawieraj±cym
-sterowniki do wy¶wietlaczy LCD takiech jak pod³±czane przez port
+sterowniki do wy¶wietlaczy LCD takich jak pod³±czane przez port
 szeregowy: Matrix Orbital, Crystal Fontz, Bayrad, LB216, LCDM001
-(kernelconcepts.de), Wirz-SLI and PIC-an-LCD; oraz przez port
-równoleg³y: HD44780, STV5730, T6963, SED1520 and SED1330. i klientów
-monitoruj±cych m.in. obci±zenie procesora, systemu, zajêto¶æ pamiêci,
-czas pracy i wiele innych.
+(kernelconcepts.de), Wirz-SLI i PIC-an-LCD; oraz przez port
+równoleg³y: HD44780, STV5730, T6963, SED1520 i SED1330. Dostêpne s±
+programy klienckie monitoruj±ce m.in. obci±¿enie procesora, systemu,
+zajêto¶æ pamiêci, czas pracy i wiele innych.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
 %setup -q
 
 %build
@@ -58,7 +56,7 @@ install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d,%{_sysconfdir}/lcdproc}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install %SOURCE1	$RPM_BUILD_ROOT/etc/rc.d/init.d/LCDd
+install %{SOURCE1}	$RPM_BUILD_ROOT/etc/rc.d/init.d/LCDd
 
 # conf files
 install LCDd.conf scripts/lcdproc.conf $RPM_BUILD_ROOT%{_sysconfdir}/lcdproc
@@ -73,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README* INSTALL TODO ChangeLog
 %dir %{_sysconfdir}/lcdproc
-%config(noreplace) %{_sysconfdir}/lcdproc/*
+%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/lcdproc/*
 %attr(754,root,root) /etc/rc.d/init.d/LCDd
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
