@@ -1,12 +1,12 @@
 Summary:	LCDproc displays real-time system information on a 20x4 backlit LCD
 Summary(pl):	LCDproc wy¶wietla aktualne informacje o systemie na wy¶wietlaczu LCD 20x4
 Name:		lcdproc
-Version:	0.4.3
-Release:	3
+Version:	0.4.5
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://lcdproc.omnipotent.net.net/%{name}-%{version}.tar.bz2
-# Source0-md5:	4f39e77f459c9cbf18e475651327a04b
+Source0:	http://dl.sourceforge.net/lcdproc/%{name}-%{version}.tar.bz2	
+# Source0-md5:	2d342eb87c550a46629ec3efb1d70f49
 Source1:	LCDd.init
 URL:		http://lcdproc.omnipotent.net/
 BuildRequires:	autoconf
