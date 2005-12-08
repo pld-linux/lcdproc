@@ -31,14 +31,14 @@ case "$1" in
 	if [ -f /var/lock/subsys/LCDd ]; then
 		msg_stopping LCDd
 		killall lcdproc
-		killproc LCDd 
+		killproc LCDd
 		rm -f /var/lock/subsys/LCDd
 	else
 		msg_not_running LCDd
 	fi
 	;;
   status)
-	status LCDd 
+	status LCDd
 	status lcdproc
 	exit $?
 	;;
