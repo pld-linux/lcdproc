@@ -5,7 +5,7 @@ Version:	0.4.5
 Release:	2
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/lcdproc/%{name}-%{version}.tar.bz2	
+Source0:	http://dl.sourceforge.net/lcdproc/%{name}-%{version}.tar.bz2
 # Source0-md5:	2d342eb87c550a46629ec3efb1d70f49
 Source1:	LCDd.init
 URL:		http://lcdproc.omnipotent.net/
@@ -55,7 +55,8 @@ CPPFLAGS="-I%{_includedir}/ncurses"; export CPPFLAGS
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d,%{_sysconfdir}/lcdproc}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1}	$RPM_BUILD_ROOT/etc/rc.d/init.d/LCDd
 
@@ -72,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README* INSTALL TODO ChangeLog
 %dir %{_sysconfdir}/lcdproc
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/lcdproc/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/lcdproc/*
 %attr(754,root,root) /etc/rc.d/init.d/LCDd
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
