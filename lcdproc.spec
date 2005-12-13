@@ -42,7 +42,7 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-CPPFLAGS="-I%{_includedir}/ncurses"; export CPPFLAGS
+CPPFLAGS="-I/usr/include/ncurses"; export CPPFLAGS
 
 %configure \
 	--enable-stat-nfs \
