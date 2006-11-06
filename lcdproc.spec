@@ -2,12 +2,15 @@ Summary:	LCDproc displays real-time system information on a 20x4 backlit LCD
 Summary(pl):	LCDproc wy¶wietla aktualne informacje o systemie na wy¶wietlaczu LCD 20x4
 Name:		lcdproc
 Version:	0.4.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lcdproc/%{name}-%{version}.tar.bz2
 # Source0-md5:	2d342eb87c550a46629ec3efb1d70f49
 Source1:	LCDd.init
+# Extracted from tweaked lcdproc source
+# http://venky.ws/projects/imon/
+Patch0:		%{name}-imon.patch
 URL:		http://lcdproc.omnipotent.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -35,6 +38,7 @@ zajêto¶æ pamiêci, czas pracy i wiele innych.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
@@ -47,7 +51,7 @@ CPPFLAGS="-I/usr/include/ncurses"; export CPPFLAGS
 %configure \
 	--enable-stat-nfs \
 	--enable-stat-smbfs \
-	--enable-drivers="mtxorb,cfontz,curses,text,lb216,hd44780,joy,irman,bayrad,glk,stv5730,sed1330,sed1520,lcdm001,t6963"
+	--enable-drivers="mtxorb,cfontz,curses,text,lb216,hd44780,joy,irman,bayrad,glk,stv5730,sed1330,sed1520,lcdm001,t6963,imon"
 
 %{__make} CFLAGS="%{rpmcflags}"
 
