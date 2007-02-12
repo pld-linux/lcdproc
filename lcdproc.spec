@@ -1,5 +1,5 @@
 Summary:	LCDproc displays real-time system information on a 20x4 backlit LCD
-Summary(pl):	LCDproc wy¶wietla aktualne informacje o systemie na wy¶wietlaczu LCD 20x4
+Summary(pl.UTF-8):   LCDproc wyÅ›wietla aktualne informacje o systemie na wyÅ›wietlaczu LCD 20x4
 Name:		lcdproc
 Version:	0.4.5
 Release:	3
@@ -27,14 +27,14 @@ HD44780, STV5730, T6963, SED1520 and SED1330. Various clients are
 available that display things like CPU load, system load, memory
 usage, uptime, and a lot more.
 
-%description -l pl
-LCDproc jest narzêdziem w architekturze klient/serwer zawieraj±cym
-sterowniki do wy¶wietlaczy LCD takich jak pod³±czane przez port
+%description -l pl.UTF-8
+LCDproc jest narzÄ™dziem w architekturze klient/serwer zawierajÄ…cym
+sterowniki do wyÅ›wietlaczy LCD takich jak podÅ‚Ä…czane przez port
 szeregowy: Matrix Orbital, Crystal Fontz, Bayrad, LB216, LCDM001
 (kernelconcepts.de), Wirz-SLI i PIC-an-LCD; oraz przez port
-równoleg³y: HD44780, STV5730, T6963, SED1520 i SED1330. Dostêpne s±
-programy klienckie monitoruj±ce m.in. obci±¿enie procesora, systemu,
-zajêto¶æ pamiêci, czas pracy i wiele innych.
+rÃ³wnolegÅ‚y: HD44780, STV5730, T6963, SED1520 i SED1330. DostÄ™pne sÄ…
+programy klienckie monitorujÄ…ce m.in. obciÄ…Å¼enie procesora, systemu,
+zajÄ™toÅ›Ä‡ pamiÄ™ci, czas pracy i wiele innych.
 
 %prep
 %setup -q
