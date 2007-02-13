@@ -1,5 +1,5 @@
 Summary:	LCDproc displays real-time system information on a 20x4 backlit LCD
-Summary(pl.UTF-8):   LCDproc wyświetla aktualne informacje o systemie na wyświetlaczu LCD 20x4
+Summary(pl.UTF-8):	LCDproc wyświetla aktualne informacje o systemie na wyświetlaczu LCD 20x4
 Name:		lcdproc
 Version:	0.4.5
 Release:	3
